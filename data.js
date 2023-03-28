@@ -69,7 +69,7 @@ const data = [{
         title: "Code Sensei",
         cardAttribute: {},
         face: "./assets/photos/Mustafa.gif",
-        charType: "[Coding Conjurer ",
+        charType: "",
         description: "This guy is a coding prodigy, he writes code faster than thought, leaving opponents stunned and scrambling to keep up with his furious programming skills.",
         used: false,
         level: 1,
@@ -83,7 +83,7 @@ const data = [{
         title: "Calculus Commander",
         cardAttribute: {},
         face: "./assets/photos/Radwan.gif",
-        charType: "[Calculation King ",
+        charType: "",
         description: "My algebraic abilities are unparalleled. I'll use them to unleash a devastating attack that will leave you reeling!",
         used: false,
         level: 1,
@@ -97,7 +97,7 @@ const data = [{
         title: "Head Bopper",
         cardAttribute: {},
         face: "./assets/photos/Khayat.gif",
-        charType: "[Trickster ",
+        charType: "",
         description: "Watch out, I may be bobbing my head to the beat, but when it comes to a fight, I'll make your head spin faster than my dance moves!",
         used: false,
         level: 1,
@@ -111,7 +111,7 @@ const data = [{
         title: "Clap Crusher",
         cardAttribute: {},
         face: "./assets/photos/Abbas.gif",
-        charType: "[Clapping Lord ",
+        charType: "",
         description: "I'll shuffle my way through your cards and crush them with my clapping hands - my rhythm will be your destruction!",
         used: false,
         level: 1,
@@ -125,7 +125,7 @@ const data = [{
         title: "The Flipper",
         cardAttribute: {},
         face: "./assets/photos/Omar.webp",
-        charType: "[Rapid Flipper ",
+        charType: "",
         description: "The Flipper's middle finger is not just a rude gesture, it's also a weapon. His lightning-fast jabs to his opponents' pressure points make them hear the 'whoosh' before they feel the 'ouch'.",
         used: false,
         level: 1,
@@ -139,7 +139,7 @@ const data = [{
         title: "The Mastermind",
         cardAttribute: {},
         face: "./assets/photos/Assaf.gif",
-        charType: "[Strategist ",
+        charType: "",
         description: "I may look goofy, but I strike with deadly precision. Taking out my opponents one by one. By the time they realize what's happening, it's already too late.",
         used: false,
         level: 1,
@@ -153,7 +153,7 @@ const data = [{
         title: "The Charmer",
         cardAttribute: {},
         face: "./assets/photos/Ramez.gif",
-        charType: "[Manipulator ",
+        charType: "",
         description: "Watch as my charm disarms not only you, but also your fighting spirit. I'm not just a player, I'm a master manipulator!",
         used: false,
         level: 1,
@@ -167,7 +167,7 @@ const data = [{
         title: "Laserlord",
         cardAttribute: {},
         face: "./assets/photos/Hanki.webp",
-        charType: "[Villainous Leader ",
+        charType: "",
         description: "I am a leader of men, feared by my enemies and respected by my allies, for my power and my intelligence. I'll use my lazereyes to burn your cards to ashes!",
         used: false,
         level: 1,
@@ -911,17 +911,16 @@ let dataFriend, dataEnemy // global to export
 
 function resetData() {
     let matchedObj = null
-    const charTypes = ["Coding Conjurer", "Calculation King", "Trickster", "Clapping Lord", "Rapid Flipper", "Strategist", "Manipulator", "Villainous Leader"]
-    for (let i = 0; i < charTypes.length; i++) {
-        data.charType = [`[${charTypes[i]} `]
+    const charTypes = ["Coding Catalyst", "Calculation King", "Trickster", "Clapping Lord", "Rapid Flipper", "Strategist", "Manipulator", "Villainous Leader"]
+    for (let i = 0; i < data.length; i++) {
+        data[i].cardType = getRandomCardType()
+        data[i].charType = `[${charTypes[i]} / ${data[i].cardType.name}]`
     }
     // Shuffle My Cards 
     let shuffledArr = data.sort(() => Math.random() - 0.5)
     dataFriend = shuffledArr
     dataFriend.forEach((card) => {
         card.level = Math.floor(Math.random() * 12) + 1
-        card.cardType = getRandomCardType()
-        card.charType += `/ ${card.cardType.name}]`
         card.cardAttribute = cardAttributes[Math.floor(Math.random() * cardAttributes.length)]
         card.atk = Math.floor(Math.random() * 5.1) * 100 + card.level * 300
         card.def = Math.floor(Math.random() * 5.1) * 100 + card.level * 300
