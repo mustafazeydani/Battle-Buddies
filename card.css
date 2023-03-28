@@ -83,13 +83,14 @@
 
 .card-monster-type { 
     font-family: 'YuGiOh_ITCStoneSerifSmallCapsBold', sans-serif;
-    font-size: 0.7em;
+    font-size: 0.70em;
+    font-weight: bolder;
     margin-bottom: 0.15em;
 }
 
 .card-monster-description {
     font-family: 'YuGiOh_ITCStoneSerifLTItalic', sans-serif;
-    font-size: 0.62em;
+    font-size: 0.68em;
 }
 
 .card-monster-atk,
