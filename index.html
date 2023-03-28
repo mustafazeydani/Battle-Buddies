@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------- CSS Files -------------->
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./turn.css">
+    <link rel="stylesheet" href="./endgame.css">
+    <link rel="stylesheet" href="./animation.css">
+    <link rel="stylesheet" href="./viewcard.css">
+    <link rel="stylesheet" href="./rules.css">
+    <link rel="stylesheet" href="./loader.css">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo/favicon16x16.png">
+
+    <!---------------- Preload -------------->
+    <link rel="preload" href="./logo/logo.webp" as="image">
+    <link rel="preload" href="./assets/1.webp" as="image">
+    <link rel="preload" href="./assets/2.webp" as="image">
+    <link rel="preload" href="./assets/3.webp" as="image">
+    <link rel="preload" href="./assets/background-vertical.webp" as="image">
+    <link rel="preload" href="./assets/background.webp" as="image">
+    <link rel="preload" href="./assets/vs.webp" as="image">
+    <link rel="preload" href="./assets/slide.gif" as="image">
+    <link rel="preload" href="./assets/dblclick.gif" as="image">
+
+    <!------------- Photos -------------->
+    <link rel="preload" href="./assets/photos/Abbas.gif" as="image">
+    <link rel="preload" href="./assets/photos/Khayat.gif" as="image">
+    <link rel="preload" href="./assets/photos/Mustafa.gif" as="image">
+    <link rel="preload" href="./assets/photos/Radwan.gif" as="image">
+    <link rel="preload" href="./assets/photos/Assaf.gif" as="image">
+    <link rel="preload" href="./assets/photos/Ramez.gif" as="image">
+    <link rel="preload" href="./assets/photos/Hanki.webp" as="image">
+    <link rel="preload" href="./assets/photos/Omar.webp" as="image">
+
+    <!--------------------- Animations ---------------->
+    <link rel="preload" href="./assets/animations/fire.webp" as="image">
+    <link rel="preload" href="./assets/animations/light.webp" as="image">
+    <link rel="preload" href="./assets/animations/water.webp" as="image">
+    <link rel="preload" href="./assets/animations/wind.webp" as="image">
+
+    <!---------------------Card Types-------------------->
+    <link rel="preload" href="./assets/card/card-types/fire.webp" as="image">
+    <link rel="preload" href="./assets/card/card-types/light.webp" as="image">
+    <link rel="preload" href="./assets/card/card-types/water.webp" as="image">
+    <link rel="preload" href="./assets/card/card-types/wind.webp" as="image">
+
+    <!---------------------Card-------------------->
+    <link rel="preload" href="./assets/card/star.webp" as="image">
+    <link rel="preload" href="./assets/card/rank-star.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/back.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/frame.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Effect.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Fusion.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Normal.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Ritual.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Synchro.webp" as="image">
+    <link rel="preload" href="./assets/card/frames/Xyz.webp" as="image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Battle Buddies</title>
+</head>
+<body>
+    <main id="content"></main>
+    <section id="turn">
+        <div id="turn-content">
+            <p id="turn-p"></p>
+        </div>
+    </section>
+    <section id="end-game">
+        <div id="end-game-content">
+            <p id="end-game-result">You Lost!</p>
+            <p id="end-game-score"></p>
+            <div id="end-game-btns">
+                <a id="rematch-btn" class="end-game-btns">Rematch</a>
+                <a id="return-btn" class="end-game-btns">Main Menu</a>
+            </div>
+        </div>
+    </section>
+    <section id="view-card">
+        <div id="view-card-container"></div>
+    </section>
+    <section id="rules"></section>
+    <section id="loading-animation">
+        <div id="loading-animation-content">
+            <img src="./logo/logo.webp">
+            <span class="loader"></span>
+        </div>
+    </section>
+    <script src="./index.js" type="module"></script> 
+</body>
+</html>

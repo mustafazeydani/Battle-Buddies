@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/****** Start Screen ******/
+
+#main-menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 7em;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #72210c;
+    padding: 0.5em 1.5em;
+}
+
+#start {
+    font-size: 1.5em;
+    padding: 0.4em 2em;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        background-color: #fff;
+        color: #72210c;
+        cursor: pointer;
+    }
+}
+
+.btn:active {
+    background-color: #fff;
+    color: #72210c;
+}
+
+/***** Fight Screen *****/
+
+#score-enemy,
+#score-friend {
+    font-family: Act_Of_Rejection, sans-serif;
+    position: absolute;
+    font-size: 5vw;
+}
+
+
+#interaction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center; 
+    width: 95vw;
+    max-width: 65dvh;
+}
+
+.slot {
+    position: relative;
+    aspect-ratio: 400/583;
+    width: 100%;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -2;
+}
+
+.card-slot {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#select{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 120%);
+    font-size: 1.5em;
+}
+
+#vs {
+    align-self: center;
+    width: 5svh;
+}
+
+#deck,
+#deck-enemy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 20vh;
+    max-width: 1000px;
+    background-color: #644321;
+    border: 8px solid #3a2614;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: .5em;
+    padding: 0 1em;
+}
+
+#deck {
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    border-width: 8px 8px 0 8px;
+}
+
+#deck-enemy {
+    top: 0;
+    border-radius: 0 0 20px 20px;
+    border-width: 0 8px 8px 8px;
+}
+
+.deck-card {
+    border-radius: 0.2em;
+    flex-basis: 10vh;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 0.3em 0.3em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+
+/*** Class Styling ***/
+.flex-start {
+    justify-content: flex-start;
+}
+
+.white {
+    color: #fff;
+}
+
+.card-active {
+    border: 2px solid rgb(237, 245, 6); 
+}
+
+.grayscale {
+    filter: grayscale(1);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    body {
+        background-image: url(./assets/background.webp);
+    }
+    
+    #score-enemy {
+        top: 50%;
+        transform: translate(-150%, -50%);
+        left: 0;
+    }
+    
+    #score-friend {
+        top: 50%;
+        transform: translate(150%, -50%);
+        right: 0;
+    }
+
+    #logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        background-image: url(./assets/background-vertical.webp);
+    }
+
+    #score-enemy, 
+    #score-friend {
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 5vh; 
+    }
+}

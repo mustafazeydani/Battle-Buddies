@@ -1,0 +1,150 @@
+#rules {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999; 
+    display: none;
+}
+
+.rules-title-1 {
+    font-size: 7vw;
+    width: max-content;
+    margin: 0.7em auto;
+    text-align: center;
+}
+
+#rules-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.rules-title-2 {
+    font-size: 5.5vw;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+#rules img {
+    width: 100%;
+}
+
+#rules .img-3 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rules-inner-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5em;
+}
+
+.rule {
+    display: flex;
+    flex-direction: column;
+    font-size: 4vw;
+    gap: 0.5em;
+}
+
+.rules-btns {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rules-card-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.rule-card p:nth-of-type(1),
+.rule-card p:nth-of-type(3) {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.rule-card p:nth-of-type(1) {
+    font-size: 0.7em;
+    font-weight: bolder;
+}
+
+.rule-card p:nth-of-type(3) {
+    font-size: 0.5em;
+    margin-bottom: 1em;
+}
+
+#rules .dblclick {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.rules-indicator {
+    display: flex;
+    gap: 1em;
+}
+.rules-indicator span {
+    width: 1em;
+    aspect-ratio: 1/1;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.rule-active {
+    background-color: white;
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .rules-title-1 {
+        font-size: 5vw;
+    }
+    .rules-title-2 {
+        font-size: 3.5vw;
+    }
+    .rule {
+        font-size: 2vw;
+    }
+    #rules-container {
+        max-width: 700px;
+    }
+    .rules-inner-container {
+        gap: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .rules-title-1 {
+        font-size: 2.5em;
+    }
+    .rules-title-2 {
+        font-size: 1.5em;
+    }
+    .rule {
+        font-size: 1.5em;
+    }
+    #rules-container {
+        max-width: 1000px;
+    }
+    .rules-inner-container {
+        gap: 3em;
+    }
+}
+
+

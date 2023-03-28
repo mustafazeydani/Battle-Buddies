@@ -1,0 +1,27 @@
+@import url('https://cdn.jsdelivr.net/gh/mustafazeydani/Fonts/Act_Of_Rejection/Act_Of_Rejection.css');
+
+#turn {
+    font-family: Act_Of_Rejection, sans-serif;
+    font-size: 16vw;
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#turn-content {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent; 
+}
+
+#turn-p {
+    margin: 2vw; 
+    width: max-content;
+}
