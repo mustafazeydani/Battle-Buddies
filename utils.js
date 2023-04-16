@@ -63,7 +63,7 @@ function getRulesHtml(currRule) {
             <p class="rules-title-2">Rules Are Straight Forward</p>
             <div class="rules-inner-container">
                 <div class="rule">
-                    <p>Note: If the cards' inner text overflow, change your browser. Chrome is recommended.</p>
+                    <p>Note: If the cards' inner text overflows, change your browser. Chrome is recommended.</p>
                 </div>
                 <div class="rule">
                     <p>1- You get a deck of cards with a random star level, attribute and frame each match.</p>
